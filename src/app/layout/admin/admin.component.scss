@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+:host {
+    .container {
+        .navbar {
+            @include mat-elevation(2, #8fddeb, 0.8);
+        }
+        .content{
+            .side-bar{
+                width: 60px ;
+                background: rgb(166, 240, 250);
+                box-shadow: 5px 0px 5px rgba( 0,0,0,0.5);
+                padding : 10px 0 ;
+                
+                .active {
+                    background-color: gray
+                }
+                mat-icon{
+                    font-size: 16px;
+                }
+            }
+            .main{
+
+            }
+        }
+    }
+}

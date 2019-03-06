@@ -1,0 +1,33 @@
+<div class="container w-100 h-100 " fxLayout="column">
+    <mat-toolbar class="navbar" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="user-logo">
+            logo
+        </div>
+        <div class="actions" fxLayout="row" fxLayoutAlign="start center">
+            <img src="../../../assets/IMG/avatar.png" width ="40" height="40" alt="avatar" style="border-radius: 50% ;cursor: pointer"  [matMenuTriggerFor]="menu">
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            </mat-menu>
+            <button mat-icon-button><mat-icon>search</mat-icon></button>
+            <button mat-icon-button><mat-icon>notifications</mat-icon></button>
+
+        </div>
+    </mat-toolbar>
+    <div class="content h-100" fxLayout="row">
+        <div class="side-bar h-100 " fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+          <div fxLayoutGap="10px" fxLayout="column"> 
+               <button [ngClass]="{'active': selectedItem =='restaurant'}" mat-icon-button (click)="onChange('restaurant') ; goToProduct()"><mat-icon>restaurant</mat-icon></button>
+               <button [ngClass]="{'active': selectedItem =='home'}" mat-icon-button (click)="onChange('home') ; ; goToProduct()"><mat-icon>home</mat-icon></button>
+               <button routerLink='/profile'[ngClass]="{'active': selectedItem =='profile'}" mat-icon-button (click)="onChange('profile') ;"><mat-icon>notifications</mat-icon></button>
+               <!-- <button routerLink='/profile'[ngClass]="{'active': selectedItem =='profile'}" mat-icon-button (click)="onChange('profile') ; goToProfile()"><mat-icon>notifications</mat-icon></button> -->
+
+        </div>
+        <div>4</div>
+        </div>
+        <div class="main ">
+            <router-outlet></router-outlet>
+            
+        </div>
+    </div>
+</div>
