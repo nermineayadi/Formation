@@ -12,7 +12,7 @@ const routes: Routes = [
         path :'profile' , loadChildren :'./layout/admin/profile/profile.module#ProfileModule'
       }
   ]
-//, authentificataion {} attention pas le meme path path :/athentification
+// , authentificataion {} attention pas le meme path path :/athentification
   }];
 
 @NgModule({
